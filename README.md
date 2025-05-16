@@ -14,6 +14,28 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
+
+in this Project this a 
+
+ <artifactId>apache-rat-plugin</artifactId>
+          <configuration>
+            <excludes combine.children="append">
+              <!--
+                ! No possibilities to add license information into a MANIFEST
+              -->
+              <exclude>src/it/MWAR-167/src/main/resources/MANIFEST.MF</exclude>
+              
+            </excludes>
+
+
+
+<exclude>Dockerfile</exclude>
+              <exclude>**/Dockerfile</exclude> 
+
+
+Add those line in between if your adding the Dockerfile              
+
+
 Contributing to [Apache Maven WAR Plugin](https://maven.apache.org/plugins/maven-war-plugin/)
 ======================
 
