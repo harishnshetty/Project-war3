@@ -204,25 +204,23 @@
       </resource>
     </resources>
     <pluginManagement>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.rat</groupId>
-      <artifactId>apache-rat-plugin</artifactId>
-      <version>0.16.1</version>
-      <configuration>
-        <excludes combine.children="append">
-          <!-- Exclude specific files that can't have a license header -->
-          <exclude>src/it/MWAR-167/src/main/resources/MANIFEST.MF</exclude>
-          
-          <!-- Exclude Dockerfile from RAT checks -->
-          <exclude>Dockerfile</exclude>
-          <exclude>**/Dockerfile</exclude> <!-- in case nested -->
-        </excludes>
-      </configuration>
-    </plugin>
-  </plugins>
-</pluginManagement>
-
+      <plugins>
+        <plugin>
+          <groupId>org.apache.rat</groupId>
+          <artifactId>apache-rat-plugin</artifactId>
+          <configuration>
+            <excludes combine.children="append">
+              <!--
+                ! No possibilities to add license information into a MANIFEST
+              -->
+              <exclude>src/it/MWAR-167/src/main/resources/MANIFEST.MF</exclude>
+              <exclude>Dockerfile</exclude>
+              <exclude>**/Dockerfile</exclude>
+            </excludes>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
 
     <plugins>
       <plugin>
