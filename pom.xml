@@ -214,6 +214,10 @@
                 ! No possibilities to add license information into a MANIFEST
               -->
               <exclude>src/it/MWAR-167/src/main/resources/MANIFEST.MF</exclude>
+              
+          <exclude>Dockerfile</exclude>
+          <exclude>**/Dockerfile</exclude> <!-- in case it's nested -->
+       
             </excludes>
           </configuration>
         </plugin>
